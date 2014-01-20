@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		11AE8BA5188DCC2F0024151A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA4188DCC2F0024151A /* Foundation.framework */; };
+		11AE8BA7188DCC2F0024151A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA6188DCC2F0024151A /* CoreGraphics.framework */; };
+		11AE8BA9188DCC2F0024151A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA8188DCC2F0024151A /* UIKit.framework */; };
+		11AE8BAF188DCC2F0024151A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BAD188DCC2F0024151A /* InfoPlist.strings */; };
+		11AE8BB1188DCC2F0024151A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BB0188DCC2F0024151A /* main.m */; };
+		11AE8BB5188DCC2F0024151A /* NmffAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */; };
+		11AE8BB8188DCC2F0024151A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BB6188DCC2F0024151A /* Main.storyboard */; };
+		11AE8BBB188DCC2F0024151A /* NmffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BBA188DCC2F0024151A /* NmffViewController.m */; };
+		11AE8BBD188DCC2F0024151A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BBC188DCC2F0024151A /* Images.xcassets */; };
+		11AE8BC4188DCC2F0024151A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BC3188DCC2F0024151A /* XCTest.framework */; };
+		11AE8BC5188DCC2F0024151A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA4188DCC2F0024151A /* Foundation.framework */; };
+		11AE8BC6188DCC2F0024151A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA8188DCC2F0024151A /* UIKit.framework */; };
+		11AE8BCE188DCC2F0024151A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BCC188DCC2F0024151A /* InfoPlist.strings */; };
+		11AE8BD0188DCC2F0024151A /* Morse_Code_ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		11AE8BC7188DCC2F0024151A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 11AE8B99188DCC2F0024151A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 11AE8BA0188DCC2F0024151A;
+			remoteInfo = "Morse Code Converter";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11AE8BA1188DCC2F0024151A /* Morse Code Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morse Code Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AE8BA4188DCC2F0024151A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		11AE8BA6188DCC2F0024151A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		11AE8BA8188DCC2F0024151A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		11AE8BAC188DCC2F0024151A /* Morse Code Converter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Morse Code Converter-Info.plist"; sourceTree = "<group>"; };
+		11AE8BAE188DCC2F0024151A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11AE8BB0188DCC2F0024151A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		11AE8BB2188DCC2F0024151A /* Morse Code Converter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Morse Code Converter-Prefix.pch"; sourceTree = "<group>"; };
+		11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NmffAppDelegate.h; sourceTree = "<group>"; };
+		11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NmffAppDelegate.m; sourceTree = "<group>"; };
+		11AE8BB7188DCC2F0024151A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		11AE8BB9188DCC2F0024151A /* NmffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NmffViewController.h; sourceTree = "<group>"; };
+		11AE8BBA188DCC2F0024151A /* NmffViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NmffViewController.m; sourceTree = "<group>"; };
+		11AE8BBC188DCC2F0024151A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		11AE8BC2188DCC2F0024151A /* Morse Code ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morse Code ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		11AE8BC3188DCC2F0024151A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		11AE8BCB188DCC2F0024151A /* Morse Code ConverterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Morse Code ConverterTests-Info.plist"; sourceTree = "<group>"; };
+		11AE8BCD188DCC2F0024151A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Morse_Code_ConverterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		11AE8B9E188DCC2F0024151A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AE8BA7188DCC2F0024151A /* CoreGraphics.framework in Frameworks */,
+				11AE8BA9188DCC2F0024151A /* UIKit.framework in Frameworks */,
+				11AE8BA5188DCC2F0024151A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11AE8BBF188DCC2F0024151A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AE8BC4188DCC2F0024151A /* XCTest.framework in Frameworks */,
+				11AE8BC6188DCC2F0024151A /* UIKit.framework in Frameworks */,
+				11AE8BC5188DCC2F0024151A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11AE8B98188DCC2F0024151A = {
+			isa = PBXGroup;
+			children = (
+				11AE8BAA188DCC2F0024151A /* Morse Code Converter */,
+				11AE8BC9188DCC2F0024151A /* Morse Code ConverterTests */,
+				11AE8BA3188DCC2F0024151A /* Frameworks */,
+				11AE8BA2188DCC2F0024151A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		11AE8BA2188DCC2F0024151A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BA1188DCC2F0024151A /* Morse Code Converter.app */,
+				11AE8BC2188DCC2F0024151A /* Morse Code ConverterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		11AE8BA3188DCC2F0024151A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BA4188DCC2F0024151A /* Foundation.framework */,
+				11AE8BA6188DCC2F0024151A /* CoreGraphics.framework */,
+				11AE8BA8188DCC2F0024151A /* UIKit.framework */,
+				11AE8BC3188DCC2F0024151A /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		11AE8BAA188DCC2F0024151A /* Morse Code Converter */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */,
+				11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */,
+				11AE8BB6188DCC2F0024151A /* Main.storyboard */,
+				11AE8BB9188DCC2F0024151A /* NmffViewController.h */,
+				11AE8BBA188DCC2F0024151A /* NmffViewController.m */,
+				11AE8BBC188DCC2F0024151A /* Images.xcassets */,
+				11AE8BAB188DCC2F0024151A /* Supporting Files */,
+			);
+			path = "Morse Code Converter";
+			sourceTree = "<group>";
+		};
+		11AE8BAB188DCC2F0024151A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BAC188DCC2F0024151A /* Morse Code Converter-Info.plist */,
+				11AE8BAD188DCC2F0024151A /* InfoPlist.strings */,
+				11AE8BB0188DCC2F0024151A /* main.m */,
+				11AE8BB2188DCC2F0024151A /* Morse Code Converter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11AE8BC9188DCC2F0024151A /* Morse Code ConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */,
+				11AE8BCA188DCC2F0024151A /* Supporting Files */,
+			);
+			path = "Morse Code ConverterTests";
+			sourceTree = "<group>";
+		};
+		11AE8BCA188DCC2F0024151A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BCB188DCC2F0024151A /* Morse Code ConverterTests-Info.plist */,
+				11AE8BCC188DCC2F0024151A /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		11AE8BA0188DCC2F0024151A /* Morse Code Converter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11AE8BD3188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code Converter" */;
+			buildPhases = (
+				11AE8B9D188DCC2F0024151A /* Sources */,
+				11AE8B9E188DCC2F0024151A /* Frameworks */,
+				11AE8B9F188DCC2F0024151A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Morse Code Converter";
+			productName = "Morse Code Converter";
+			productReference = 11AE8BA1188DCC2F0024151A /* Morse Code Converter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		11AE8BC1188DCC2F0024151A /* Morse Code ConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 11AE8BD6188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code ConverterTests" */;
+			buildPhases = (
+				11AE8BBE188DCC2F0024151A /* Sources */,
+				11AE8BBF188DCC2F0024151A /* Frameworks */,
+				11AE8BC0188DCC2F0024151A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				11AE8BC8188DCC2F0024151A /* PBXTargetDependency */,
+			);
+			name = "Morse Code ConverterTests";
+			productName = "Morse Code ConverterTests";
+			productReference = 11AE8BC2188DCC2F0024151A /* Morse Code ConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		11AE8B99188DCC2F0024151A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Nmff;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "NMFF Development";
+				TargetAttributes = {
+					11AE8BC1188DCC2F0024151A = {
+						TestTargetID = 11AE8BA0188DCC2F0024151A;
+					};
+				};
+			};
+			buildConfigurationList = 11AE8B9C188DCC2F0024151A /* Build configuration list for PBXProject "Morse Code Converter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 11AE8B98188DCC2F0024151A;
+			productRefGroup = 11AE8BA2188DCC2F0024151A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				11AE8BA0188DCC2F0024151A /* Morse Code Converter */,
+				11AE8BC1188DCC2F0024151A /* Morse Code ConverterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		11AE8B9F188DCC2F0024151A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AE8BBD188DCC2F0024151A /* Images.xcassets in Resources */,
+				11AE8BAF188DCC2F0024151A /* InfoPlist.strings in Resources */,
+				11AE8BB8188DCC2F0024151A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11AE8BC0188DCC2F0024151A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AE8BCE188DCC2F0024151A /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		11AE8B9D188DCC2F0024151A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AE8BB1188DCC2F0024151A /* main.m in Sources */,
+				11AE8BB5188DCC2F0024151A /* NmffAppDelegate.m in Sources */,
+				11AE8BBB188DCC2F0024151A /* NmffViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		11AE8BBE188DCC2F0024151A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				11AE8BD0188DCC2F0024151A /* Morse_Code_ConverterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		11AE8BC8188DCC2F0024151A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 11AE8BA0188DCC2F0024151A /* Morse Code Converter */;
+			targetProxy = 11AE8BC7188DCC2F0024151A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		11AE8BAD188DCC2F0024151A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AE8BAE188DCC2F0024151A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		11AE8BB6188DCC2F0024151A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AE8BB7188DCC2F0024151A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		11AE8BCC188DCC2F0024151A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				11AE8BCD188DCC2F0024151A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		11AE8BD1188DCC2F0024151A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		11AE8BD2188DCC2F0024151A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		11AE8BD4188DCC2F0024151A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
+				INFOPLIST_FILE = "Morse Code Converter/Morse Code Converter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		11AE8BD5188DCC2F0024151A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
+				INFOPLIST_FILE = "Morse Code Converter/Morse Code Converter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		11AE8BD7188DCC2F0024151A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Morse Code Converter.app/Morse Code Converter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Morse Code ConverterTests/Morse Code ConverterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		11AE8BD8188DCC2F0024151A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Morse Code Converter.app/Morse Code Converter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
+				INFOPLIST_FILE = "Morse Code ConverterTests/Morse Code ConverterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		11AE8B9C188DCC2F0024151A /* Build configuration list for PBXProject "Morse Code Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AE8BD1188DCC2F0024151A /* Debug */,
+				11AE8BD2188DCC2F0024151A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		11AE8BD3188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code Converter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AE8BD4188DCC2F0024151A /* Debug */,
+				11AE8BD5188DCC2F0024151A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		11AE8BD6188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code ConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11AE8BD7188DCC2F0024151A /* Debug */,
+				11AE8BD8188DCC2F0024151A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 11AE8B99188DCC2F0024151A /* Project object */;
+}
