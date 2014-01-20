@@ -21,6 +21,9 @@
 		11AE8BC6188DCC2F0024151A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA8188DCC2F0024151A /* UIKit.framework */; };
 		11AE8BCE188DCC2F0024151A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BCC188DCC2F0024151A /* InfoPlist.strings */; };
 		11AE8BD0188DCC2F0024151A /* Morse_Code_ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */; };
+		11AE8BE0188DD0820024151A /* Morse Code.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BDF188DD0820024151A /* Morse Code.plist */; };
+		11AE8BE3188DD10B0024151A /* NmffMorseCodeDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */; };
+		11AE8BE6188DD7090024151A /* NSString+Morse.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BE5188DD7090024151A /* NSString+Morse.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,11 @@
 		11AE8BCB188DCC2F0024151A /* Morse Code ConverterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Morse Code ConverterTests-Info.plist"; sourceTree = "<group>"; };
 		11AE8BCD188DCC2F0024151A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Morse_Code_ConverterTests.m; sourceTree = "<group>"; };
+		11AE8BDF188DD0820024151A /* Morse Code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Morse Code.plist"; path = "../Morse Code.plist"; sourceTree = "<group>"; };
+		11AE8BE1188DD10B0024151A /* NmffMorseCodeDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NmffMorseCodeDict.h; sourceTree = "<group>"; };
+		11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NmffMorseCodeDict.m; sourceTree = "<group>"; };
+		11AE8BE4188DD7090024151A /* NSString+Morse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Morse.h"; sourceTree = "<group>"; };
+		11AE8BE5188DD7090024151A /* NSString+Morse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Morse.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,9 +123,14 @@
 				11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */,
 				11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */,
 				11AE8BB6188DCC2F0024151A /* Main.storyboard */,
+				11AE8BE4188DD7090024151A /* NSString+Morse.h */,
+				11AE8BE5188DD7090024151A /* NSString+Morse.m */,
 				11AE8BB9188DCC2F0024151A /* NmffViewController.h */,
 				11AE8BBA188DCC2F0024151A /* NmffViewController.m */,
+				11AE8BE1188DD10B0024151A /* NmffMorseCodeDict.h */,
+				11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */,
 				11AE8BBC188DCC2F0024151A /* Images.xcassets */,
+				11AE8BDF188DD0820024151A /* Morse Code.plist */,
 				11AE8BAB188DCC2F0024151A /* Supporting Files */,
 			);
 			path = "Morse Code Converter";
@@ -231,6 +244,7 @@
 			files = (
 				11AE8BBD188DCC2F0024151A /* Images.xcassets in Resources */,
 				11AE8BAF188DCC2F0024151A /* InfoPlist.strings in Resources */,
+				11AE8BE0188DD0820024151A /* Morse Code.plist in Resources */,
 				11AE8BB8188DCC2F0024151A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +266,8 @@
 			files = (
 				11AE8BB1188DCC2F0024151A /* main.m in Sources */,
 				11AE8BB5188DCC2F0024151A /* NmffAppDelegate.m in Sources */,
+				11AE8BE6188DD7090024151A /* NSString+Morse.m in Sources */,
+				11AE8BE3188DD10B0024151A /* NmffMorseCodeDict.m in Sources */,
 				11AE8BBB188DCC2F0024151A /* NmffViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

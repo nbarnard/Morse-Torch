@@ -7,12 +7,25 @@
 //
 
 #import "NmffViewController.h"
+#import "NSString+Morse.h"
 
 @interface NmffViewController ()
+@property (weak, nonatomic) IBOutlet UITextView *textToEncode;
 
 @end
 
+
+
 @implementation NmffViewController
+
+#pragma mark - UIButton
+- (IBAction)tappedGenerateMorseCodeButton:(id)sender {
+    NSLog(@"%@", _textToEncode.text);
+    NSLog(@"%@",[_textToEncode.text convertToMorseCode]);
+
+
+}
+
 
 - (void)viewDidLoad
 {
