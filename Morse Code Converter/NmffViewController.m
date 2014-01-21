@@ -10,8 +10,7 @@
 #import "NSString+Morse.h"
 
 @interface NmffViewController ()
-@property (weak, nonatomic) IBOutlet UITextView *textToEncode;
-@property (strong, nonatomic) IBOutlet UIView *mainView;
+@property (weak, nonatomic) IBOutlet UITextField *textToEncode;
 
 @end
 
@@ -19,31 +18,37 @@
 
 @implementation NmffViewController
 
-#pragma mark - UIButton
-- (IBAction)tappedGenerateMorseCodeButton:(id)sender {
+#pragma mark - UIView
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    _textToEncode.delegate = self;
+}
 
-    NSLog(@"%@", _textToEncode.text);
+#pragma mark - UIButton
+
+- (IBAction)tappedGenerateMorseCodeButton:(id)sender {
+    NSLog(@"Input Text: %@", _textToEncode.text);
     if ([_textToEncode.text canEncodeToMorseCode]) {
-        NSLog(@"%@",[_textToEncode.text convertToMorseCode]);
+        NSLog(@"Equivelent Morse Code: %@",[_textToEncode.text convertToMorseCode]);
     } else {
         NSLog(@"Cannot Be Converted to Morse Code");
     }
 
 }
 
+#pragma mark - UITextFieldDelegate
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-
+- (void)textFieldDidEndEditing: (UITextField *)textField {
+    [textField endEditing:YES];
 }
 
-- (void)dismissKeyboard {
-    [_textToEncode resignFirstResponder];
+- (BOOL)textFieldShouldReturn: (UITextField *)textField {
+    [textField resignFirstResponder];
+    return YES;
 }
 
-- (void)didReceiveMemoryWarning
-{
+#pragma mark - Boilerplate
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
