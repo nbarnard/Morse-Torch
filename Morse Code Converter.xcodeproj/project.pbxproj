@@ -120,17 +120,8 @@
 		11AE8BAA188DCC2F0024151A /* Morse Code Converter */ = {
 			isa = PBXGroup;
 			children = (
-				11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */,
-				11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */,
-				11AE8BB6188DCC2F0024151A /* Main.storyboard */,
-				11AE8BE4188DD7090024151A /* NSString+Morse.h */,
-				11AE8BE5188DD7090024151A /* NSString+Morse.m */,
-				11AE8BB9188DCC2F0024151A /* NmffViewController.h */,
-				11AE8BBA188DCC2F0024151A /* NmffViewController.m */,
-				11AE8BE1188DD10B0024151A /* NmffMorseCodeDict.h */,
-				11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */,
-				11AE8BBC188DCC2F0024151A /* Images.xcassets */,
-				11AE8BDF188DD0820024151A /* Morse Code.plist */,
+				11AE8BE9188E500D0024151A /* View */,
+				11AE8BEA188E50250024151A /* String Handling */,
 				11AE8BAB188DCC2F0024151A /* Supporting Files */,
 			);
 			path = "Morse Code Converter";
@@ -139,6 +130,10 @@
 		11AE8BAB188DCC2F0024151A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				11AE8BBC188DCC2F0024151A /* Images.xcassets */,
+				11AE8BDF188DD0820024151A /* Morse Code.plist */,
+				11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */,
+				11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */,
 				11AE8BAC188DCC2F0024151A /* Morse Code Converter-Info.plist */,
 				11AE8BAD188DCC2F0024151A /* InfoPlist.strings */,
 				11AE8BB0188DCC2F0024151A /* main.m */,
@@ -163,6 +158,27 @@
 				11AE8BCC188DCC2F0024151A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11AE8BE9188E500D0024151A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BB6188DCC2F0024151A /* Main.storyboard */,
+				11AE8BB9188DCC2F0024151A /* NmffViewController.h */,
+				11AE8BBA188DCC2F0024151A /* NmffViewController.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		11AE8BEA188E50250024151A /* String Handling */ = {
+			isa = PBXGroup;
+			children = (
+				11AE8BE4188DD7090024151A /* NSString+Morse.h */,
+				11AE8BE5188DD7090024151A /* NSString+Morse.m */,
+				11AE8BE1188DD10B0024151A /* NmffMorseCodeDict.h */,
+				11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */,
+			);
+			name = "String Handling";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -477,6 +493,7 @@
 				11AE8BD5188DCC2F0024151A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		11AE8BD6188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code ConverterTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +502,7 @@
 				11AE8BD8188DCC2F0024151A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -10,7 +10,7 @@
 
 @implementation NmffMorseCodeDict
 
-+ (NmffMorseCodeDict *)shared {
++ (NmffMorseCodeDict *) shared {
 
     static dispatch_once_t pred;
     static NmffMorseCodeDict *shared = nil;
