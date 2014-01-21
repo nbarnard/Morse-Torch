@@ -11,11 +11,25 @@
 
 @implementation NSString (Morse)
 
-
-- (NSString *) convertToMorseCode {
+- (BOOL) canEncodeToMorseCode {
+    NmffMorseCodeDict *dict = [NmffMorseCodeDict shared];
 
     int length = self.length;
+    NSString *currentChar = [NSString new];
 
+    for (int i=0; i < length; i++) {
+        currentChar = [[self substringWithRange:NSMakeRange(i, 1)] uppercaseString];
+        if ([dict.morseCodeDict objectForKey:currentChar] == nil) {
+            NSLog(@"%@", currentChar);
+            return false;
+        }
+    }
+    return true;
+}
+
+
+- (NSString *) convertToMorseCode {
+    int length = self.length;
     NSMutableString *convertedString = [NSMutableString new];
     NSString *convertedChar = [NSString new];
 
@@ -28,7 +42,6 @@
 }
 
 - (NSString *) convertCharToMorseCode: (NSString *) singleCharacter {
-
     NmffMorseCodeDict *dict = [NmffMorseCodeDict shared];
 
     NSString *convertedChar = [dict.morseCodeDict objectForKey:[singleCharacter uppercaseString]];

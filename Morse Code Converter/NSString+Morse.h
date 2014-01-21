@@ -11,5 +11,6 @@
 @interface NSString (Morse)
 
 - (NSString *) convertToMorseCode;
+- (BOOL) canEncodeToMorseCode;
 
 @end

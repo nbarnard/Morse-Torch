@@ -43,6 +43,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="mainViewController" destination="kh9-bI-dsS" id="MQA-Uq-GVu"/>
                         <outlet property="textToEncode" destination="0Zr-6e-bCK" id="pNC-OC-AeZ"/>
                     </connections>
                 </viewController>

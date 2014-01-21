@@ -11,6 +11,7 @@
 
 @interface NmffViewController ()
 @property (weak, nonatomic) IBOutlet UITextView *textToEncode;
+@property (strong, nonatomic) IBOutlet UIView *mainView;
 
 @end
 
@@ -20,17 +21,25 @@
 
 #pragma mark - UIButton
 - (IBAction)tappedGenerateMorseCodeButton:(id)sender {
-    NSLog(@"%@", _textToEncode.text);
-    NSLog(@"%@",[_textToEncode.text convertToMorseCode]);
 
+    NSLog(@"%@", _textToEncode.text);
+    if ([_textToEncode.text canEncodeToMorseCode]) {
+        NSLog(@"%@",[_textToEncode.text convertToMorseCode]);
+    } else {
+        NSLog(@"Cannot Be Converted to Morse Code");
+    }
 
 }
 
 
-- (void)viewDidLoad
-{
+
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+
+}
+
+- (void)dismissKeyboard {
+    [_textToEncode resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning
