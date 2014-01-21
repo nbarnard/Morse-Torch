@@ -42,6 +42,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="generateMorseButton" destination="xo8-gC-6iM" id="A3y-kz-2Fu"/>
                         <outlet property="textToEncode" destination="HHg-kx-A8o" id="Dsw-EW-ztg"/>
                     </connections>
                 </viewController>
