@@ -10,6 +10,8 @@
 
 @implementation NmffMorseCodeDict
 
+#pragma mark - Initalizers 
+
 + (NmffMorseCodeDict *) shared {
 
     static dispatch_once_t pred;

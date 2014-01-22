@@ -20,6 +20,8 @@
 
 @implementation NmffTorchController
 
+#pragma mark - Initalizers / Cancellers
+
 + (NmffTorchController *) shared {
 
     static dispatch_once_t pred;
@@ -53,8 +55,16 @@
 
 }
 
+
+- (void) cancelSending {
+    [_torchQueue cancelAllOperations];
+}
+
+#pragma mark - String Sending
+
+// Block code inspired by http://stackoverflow.com/questions/4962673/how-to-cancel-out-of-operation-created-with-addoperationwithblock
 - (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel {
-    [_torchQueue addOperationWithBlock:^{
+    __block NSBlockOperation *sendString = [NSBlockOperation blockOperationWithBlock:^{
         NSString *morseEncodedString = [NSString new];
         morseEncodedString = [stringToSend convertToMorseCode];
 
@@ -66,7 +76,8 @@
         NSString *dotDashToSend = [NSString new];
         NSString *charToSend = [NSString new];
 
-        for (NSUInteger morseStringLocation=0, textStringLocation = 0; morseStringLocation < length; morseStringLocation++) {
+        // For Loop both increments and checks if this block has been canceled.
+        for (NSUInteger morseStringLocation=0, textStringLocation = 0; morseStringLocation < length && ![sendString isCancelled]; morseStringLocation++) {
             dotDashToSend = [morseEncodedString substringWithRange:NSMakeRange(morseStringLocation, 1)];
 
             charToSend = [stringToSend substringWithRange:NSMakeRange(textStringLocation, 1)];
@@ -86,6 +97,8 @@
         }];
 
     }];
+
+    [_torchQueue addOperation:sendString];
 }
 
 - (void) sendChar: (NSString *) character {

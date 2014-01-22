@@ -11,6 +11,8 @@
 
 @implementation NSString (Morse)
 
+#pragma mark - Morse String Encoding
+
 - (BOOL) canEncodeToMorseCode {
     NmffMorseCodeDict *dict = [NmffMorseCodeDict shared];
 

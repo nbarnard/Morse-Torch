@@ -28,7 +28,7 @@
 
 #pragma mark - UIButton
 
-- (IBAction) tappedGenerateMorseCodeButton:(id)sender {
+- (IBAction) sendMorseButton:(id)sender {
     if ([_textToEncode.text canEncodeToMorseCode]) {
         NmffTorchController *torchController = [NmffTorchController shared];
         [torchController sendString:_textToEncode.text withLabel: _currentlySendingLabel];
@@ -38,6 +38,10 @@
     }
 }
 
+- (IBAction) cancelSendingButton:(id) sender {
+    NmffTorchController *torchController = [NmffTorchController shared];
+    [torchController cancelSending];
+}
 
 #pragma mark - UITextFieldDelegate
 
