@@ -62,17 +62,22 @@
             currentlySendingLabel.enabled = TRUE;
         }];
 
-        NSUInteger length = stringToSend.length;
+        NSUInteger length = morseEncodedString.length;
         NSString *dotDashToSend = [NSString new];
         NSString *charToSend = [NSString new];
 
-        for (NSUInteger i=0; i < length; i++) {
-            dotDashToSend = [morseEncodedString substringWithRange:NSMakeRange(i, 1)];
-            charToSend = [stringToSend substringWithRange:NSMakeRange(i, 1)];
+        for (NSUInteger morseStringLocation=0, textStringLocation = 0; morseStringLocation < length; morseStringLocation++) {
+            dotDashToSend = [morseEncodedString substringWithRange:NSMakeRange(morseStringLocation, 1)];
 
+            charToSend = [stringToSend substringWithRange:NSMakeRange(textStringLocation, 1)];
             [_mainQueue addOperationWithBlock:^ {
                 currentlySendingLabel.text = [@"Currently Sending: " stringByAppendingString:charToSend];
             }];
+            // If the Dot/Dash/Space that we're sending is a space it means we're at the end of a character, so we need to the textStringLocation by one so the next update will give us the right letter
+            if ([dotDashToSend isEqualToString:@" "]){
+                textStringLocation++;
+            }
+
             [self sendChar:dotDashToSend];
         }
 
