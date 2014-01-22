@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NmffTorchController.h"
 
-@interface NmffViewController : UIViewController <UITextFieldDelegate>
+@interface NmffViewController : UIViewController <UITextFieldDelegate, NmffTorchDelegate>
 
 @end

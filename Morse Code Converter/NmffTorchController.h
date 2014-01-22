@@ -8,11 +8,21 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol NmffTorchDelegate
+
+-(void) updateCurrentlySendingLabelWithChar: (NSString *) label;
+-(void) toggleCancelButton: (BOOL) status;
+-(void) toggleSendButton: (BOOL) status;
+
+@end
+
 @interface NmffTorchController : NSObject
 
 + (NmffTorchController *) shared;
 
-- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel andCancelButton: (UIButton *) cancelButton;
+- (void) sendString: (NSString *)stringToSend;
 - (void) cancelSending;
+
+@property (unsafe_unretained) id <NmffTorchDelegate> delegate;
 
 @end

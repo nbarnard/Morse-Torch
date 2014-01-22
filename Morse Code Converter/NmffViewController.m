@@ -24,19 +24,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _textToEncode.delegate = self;
-    _sendMorseButton.enabled = FALSE;
-    _cancelSendButton.enabled = FALSE;
+    [self toggleSendButton:FALSE];
+    [self toggleCancelButton:FALSE];
 }
 
 #pragma mark - UIButton
 
 - (IBAction) sendMorseButton:(id)sender {
     if ([_textToEncode.text canEncodeToMorseCode]) {
-        _sendMorseButton.enabled = FALSE;
+        [self toggleSendButton:FALSE];
         NmffTorchController *torchController = [NmffTorchController shared];
-        [torchController sendString: _textToEncode.text
-                          withLabel: _currentlySendingLabel
-                    andCancelButton: _cancelSendButton];
+        torchController.delegate = self;
+        [torchController sendString: _textToEncode.text];
         _textToEncode.text = @""; // set the text field to blank so the user knows we'll process it
 
     } else {
@@ -49,6 +48,28 @@
     [torchController cancelSending];
 }
 
+#pragma mark - NmffTorchDelegate
+#pragma mark UIButton
+
+- (void) toggleCancelButton:(BOOL)status {
+    _cancelSendButton.enabled = status;
+}
+
+- (void) toggleSendButton:(BOOL) status{
+    _sendMorseButton.enabled = status;
+}
+
+#pragma mark UILabel
+
+- (void) updateCurrentlySendingLabelWithChar:(NSString *)label {
+    if([label isEqualToString:@""]) {
+        _currentlySendingLabel.text = @"";
+    } else {
+    _currentlySendingLabel.text = [@"Currently Sending: " stringByAppendingString:label];
+    }
+}
+
+
 #pragma mark - UITextFieldDelegate
 
 - (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
@@ -56,9 +77,9 @@
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
 
     if ([newString canEncodeToMorseCode] && newString.length !=0) {
-        _sendMorseButton.enabled = TRUE;
+        [self toggleSendButton:TRUE];
     } else {
-        _sendMorseButton.enabled = FALSE;
+        [self toggleSendButton:FALSE];
     }
 
     return YES;

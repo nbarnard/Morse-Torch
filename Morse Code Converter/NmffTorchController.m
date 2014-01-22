@@ -64,15 +64,11 @@
 
 // Block code inspired by http://stackoverflow.com/questions/4962673/how-to-cancel-out-of-operation-created-with-addoperationwithblock
 
-- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel andCancelButton: (UIButton *) cancelButton {
-    cancelButton.enabled = TRUE;
+- (void) sendString: (NSString *)stringToSend {
+    [_delegate toggleCancelButton:TRUE];
 
     __block NSBlockOperation *sendString = [NSBlockOperation blockOperationWithBlock:^{
         NSString *morseEncodedString = [stringToSend convertToMorseCode];
-
-        [_mainQueue addOperationWithBlock:^ {
-            currentlySendingLabel.enabled = TRUE;
-        }];
 
         NSUInteger length = morseEncodedString.length;
 
@@ -82,7 +78,7 @@
             NSString *charToSend = [stringToSend substringWithRange:NSMakeRange(textStringLocation, 1)];
 
             [_mainQueue addOperationWithBlock:^ {
-                currentlySendingLabel.text = [@"Currently Sending: " stringByAppendingString:charToSend];
+                [_delegate updateCurrentlySendingLabelWithChar:charToSend];
             }];
             // If the Dot/Dash/Space that we're sending is a plus it means we're at the end of a character, so we need to the textStringLocation by one so the next update will give us the right letter
             if ([dotDashToSend isEqualToString:@"+"]){
@@ -92,8 +88,8 @@
         } // For loop end
 
         [_mainQueue addOperationWithBlock:^ {
-            currentlySendingLabel.text = @"";
-            cancelButton.enabled = FALSE;
+            [_delegate updateCurrentlySendingLabelWithChar:@""];
+            [_delegate toggleCancelButton:FALSE];
         }];
 
     }]; // send string block end
@@ -115,13 +111,13 @@
 }
 
 - (void) sendDot {
-    // Dot is 0.1 of light on, followed by 0.1 of light off.
+    // Dot is 0.1 of light on, followed by 0.2 of light off.
     [self torchOnForSeconds:0.1];
     [self sleepForSeconds:0.2];
 }
 
 - (void) sendDash {
-    // Dash is 0.3 of light on, followed by 0.1 of light off.
+    // Dash is 0.3 of light on, followed by 0.2 of light off.
     [self torchOnForSeconds:0.3];
     [self sleepForSeconds:0.2];
 }
