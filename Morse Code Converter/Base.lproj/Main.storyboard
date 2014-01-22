@@ -29,20 +29,37 @@
                                 <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xo8-gC-6iM">
-                                <rect key="frame" x="84" y="131" width="152" height="30"/>
+                                <rect key="frame" x="41" y="131" width="128" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Generate Morse Code">
+                                <state key="normal" title="Send Morse Code">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="tappedGenerateMorseCodeButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="l5r-1R-Gtx"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHS-18-Ixo">
+                                <rect key="frame" x="73" y="169" width="206" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ose-g1-9RL">
+                                <rect key="frame" x="186" y="131" width="93" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Cancel Send">
+                                    <color key="titleColor" red="1" green="0.074403942449999996" blue="0.084121063250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="generateMorseButton" destination="xo8-gC-6iM" id="A3y-kz-2Fu"/>
+                        <outlet property="cancelSendButton" destination="Ose-g1-9RL" id="z3b-dz-IyH"/>
+                        <outlet property="currentlySendingLabel" destination="rHS-18-Ixo" id="Gd9-C7-2oh"/>
+                        <outlet property="sendMorseButton" destination="xo8-gC-6iM" id="lVb-nr-xEz"/>
                         <outlet property="textToEncode" destination="HHg-kx-A8o" id="Dsw-EW-ztg"/>
                     </connections>
                 </viewController>

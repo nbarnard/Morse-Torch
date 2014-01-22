@@ -7,11 +7,14 @@
 //
 
 #import "NmffTorchController.h"
+#import "NSString+Morse.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface NmffTorchController ()
 
 @property (nonatomic) AVCaptureDevice *torch;
+@property (nonatomic) NSOperationQueue *torchQueue;
+@property (nonatomic) NSOperationQueue *mainQueue;
 
 @end
 
@@ -39,6 +42,10 @@
         for (AVCaptureDevice *device in devices) {
             if ([device hasTorch] && [device isTorchModeSupported:AVCaptureTorchModeOn]) {
                 _torch = device;
+                _torchQueue = [NSOperationQueue new];
+                [_torchQueue setMaxConcurrentOperationCount:1];
+                _mainQueue = [NSOperationQueue mainQueue];
+
             }
         }
     }
@@ -46,15 +53,34 @@
 
 }
 
-- (void) sendString: (NSString *) stringToSend {
-    NSUInteger length = stringToSend.length;
+- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel {
+    [_torchQueue addOperationWithBlock:^{
+        NSString *morseEncodedString = [NSString new];
+        morseEncodedString = [stringToSend convertToMorseCode];
 
-    NSString *charToSend = [NSString new];
+        [_mainQueue addOperationWithBlock:^ {
+            currentlySendingLabel.enabled = TRUE;
+        }];
 
-    for (NSUInteger i=0; i < length; i++) {
-        charToSend = [stringToSend substringWithRange:NSMakeRange(i, 1)];
-        [self sendChar:charToSend];
-    }
+        NSUInteger length = stringToSend.length;
+        NSString *dotDashToSend = [NSString new];
+        NSString *charToSend = [NSString new];
+
+        for (NSUInteger i=0; i < length; i++) {
+            dotDashToSend = [morseEncodedString substringWithRange:NSMakeRange(i, 1)];
+            charToSend = [stringToSend substringWithRange:NSMakeRange(i, 1)];
+
+            [_mainQueue addOperationWithBlock:^ {
+                currentlySendingLabel.text = [@"Currently Sending: " stringByAppendingString:charToSend];
+            }];
+            [self sendChar:dotDashToSend];
+        }
+
+        [_mainQueue addOperationWithBlock:^ {
+            currentlySendingLabel.text = @"";
+        }];
+
+    }];
 }
 
 - (void) sendChar: (NSString *) character {

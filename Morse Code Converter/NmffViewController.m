@@ -12,7 +12,9 @@
 
 @interface NmffViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textToEncode;
-@property (weak, nonatomic) IBOutlet UIButton *generateMorseButton;
+@property (weak, nonatomic) IBOutlet UIButton *sendMorseButton;
+@property (weak, nonatomic) IBOutlet UILabel *currentlySendingLabel;
+@property (weak, nonatomic) IBOutlet UIButton *cancelSendButton;
 
 @end
 
@@ -22,34 +24,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _textToEncode.delegate = self;
-    _generateMorseButton.enabled = FALSE;
 }
 
 #pragma mark - UIButton
 
 - (IBAction) tappedGenerateMorseCodeButton:(id)sender {
     if ([_textToEncode.text canEncodeToMorseCode]) {
-        NSString *morseEncodedString = [NSString new];
-        morseEncodedString = [_textToEncode.text convertToMorseCode];
         NmffTorchController *torchController = [NmffTorchController shared];
-        [torchController sendString:morseEncodedString];
+        [torchController sendString:_textToEncode.text withLabel: _currentlySendingLabel];
+            _textToEncode.text = @""; // set the text field to blank so the user knows we'll process it
     } else {
-        NSLog(@"Cannot Be Converted to Morse Code");
+        NSLog(@"Cannot Be Converted to Morse Code"); // This should not be reached as the button should be deactivated.
     }
 }
+
 
 #pragma mark - UITextFieldDelegate
 
 - (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
 
-    _generateMorseButton.enabled = !_generateMorseButton.enabled;
+    _sendMorseButton.enabled = !_sendMorseButton.enabled;
 
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
 
     if ([newString canEncodeToMorseCode] && newString.length !=0) {
-        _generateMorseButton.enabled = TRUE;
+        _sendMorseButton.enabled = TRUE;
     } else {
-        _generateMorseButton.enabled = FALSE;
+        _sendMorseButton.enabled = FALSE;
     }
 
     return YES;
