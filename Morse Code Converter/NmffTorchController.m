@@ -66,7 +66,6 @@
 
 - (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel andCancelButton: (UIButton *) cancelButton {
     cancelButton.enabled = TRUE;
-    NSLog(@"Cancel Button Enabled");
 
     __block NSBlockOperation *sendString = [NSBlockOperation blockOperationWithBlock:^{
         NSString *morseEncodedString = [stringToSend convertToMorseCode];
@@ -95,7 +94,6 @@
         [_mainQueue addOperationWithBlock:^ {
             currentlySendingLabel.text = @"";
             cancelButton.enabled = FALSE;
-            NSLog(@"Cancel Button Disabled");
         }];
 
     }]; // send string block end

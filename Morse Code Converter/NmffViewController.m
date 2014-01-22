@@ -26,7 +26,6 @@
     _textToEncode.delegate = self;
     _sendMorseButton.enabled = FALSE;
     _cancelSendButton.enabled = FALSE;
-    NSLog(@"Cancel Button Disabled");
 }
 
 #pragma mark - UIButton
@@ -53,8 +52,6 @@
 #pragma mark - UITextFieldDelegate
 
 - (BOOL) textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-
-    _sendMorseButton.enabled = !_sendMorseButton.enabled;
 
     NSString *newString = [textField.text stringByReplacingCharactersInRange:range withString:string];
 

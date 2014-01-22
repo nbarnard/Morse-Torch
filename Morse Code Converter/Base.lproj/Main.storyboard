@@ -34,6 +34,9 @@
                                 <state key="normal" title="Send Morse Code">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="sendMorseButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Bz9-AQ-vSd"/>
                                 </connections>
@@ -51,6 +54,9 @@
                                 <state key="normal" title="Cancel Send">
                                     <color key="titleColor" red="1" green="0.074403942449999996" blue="0.084121063250000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="disabled">
+                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelSendingButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ulB-gD-mYZ"/>
