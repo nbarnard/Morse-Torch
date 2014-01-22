@@ -12,7 +12,7 @@
 
 + (NmffTorchController *) shared;
 
-- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel;
+- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel andCancelButton: (UIButton *) cancelButton;
 - (void) cancelSending;
 
 @end

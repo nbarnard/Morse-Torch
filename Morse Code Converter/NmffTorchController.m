@@ -63,40 +63,42 @@
 #pragma mark - String Sending
 
 // Block code inspired by http://stackoverflow.com/questions/4962673/how-to-cancel-out-of-operation-created-with-addoperationwithblock
-- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel {
+
+- (void) sendString: (NSString *)stringToSend withLabel: (UILabel *)currentlySendingLabel andCancelButton: (UIButton *) cancelButton {
+    cancelButton.enabled = TRUE;
+    NSLog(@"Cancel Button Enabled");
+
     __block NSBlockOperation *sendString = [NSBlockOperation blockOperationWithBlock:^{
-        NSString *morseEncodedString = [NSString new];
-        morseEncodedString = [stringToSend convertToMorseCode];
+        NSString *morseEncodedString = [stringToSend convertToMorseCode];
 
         [_mainQueue addOperationWithBlock:^ {
             currentlySendingLabel.enabled = TRUE;
         }];
 
         NSUInteger length = morseEncodedString.length;
-        NSString *dotDashToSend = [NSString new];
-        NSString *charToSend = [NSString new];
 
         // For Loop both increments and checks if this block has been canceled.
         for (NSUInteger morseStringLocation=0, textStringLocation = 0; morseStringLocation < length && ![sendString isCancelled]; morseStringLocation++) {
-            dotDashToSend = [morseEncodedString substringWithRange:NSMakeRange(morseStringLocation, 1)];
+            NSString *dotDashToSend = [morseEncodedString substringWithRange:NSMakeRange(morseStringLocation, 1)];
+            NSString *charToSend = [stringToSend substringWithRange:NSMakeRange(textStringLocation, 1)];
 
-            charToSend = [stringToSend substringWithRange:NSMakeRange(textStringLocation, 1)];
             [_mainQueue addOperationWithBlock:^ {
                 currentlySendingLabel.text = [@"Currently Sending: " stringByAppendingString:charToSend];
             }];
-            // If the Dot/Dash/Space that we're sending is a space it means we're at the end of a character, so we need to the textStringLocation by one so the next update will give us the right letter
-            if ([dotDashToSend isEqualToString:@" "]){
+            // If the Dot/Dash/Space that we're sending is a plus it means we're at the end of a character, so we need to the textStringLocation by one so the next update will give us the right letter
+            if ([dotDashToSend isEqualToString:@"+"]){
                 textStringLocation++;
             }
-
             [self sendChar:dotDashToSend];
-        }
+        } // For loop end
 
         [_mainQueue addOperationWithBlock:^ {
             currentlySendingLabel.text = @"";
+            cancelButton.enabled = FALSE;
+            NSLog(@"Cancel Button Disabled");
         }];
 
-    }];
+    }]; // send string block end
 
     [_torchQueue addOperation:sendString];
 }
@@ -106,8 +108,10 @@
         [self sendDash];
     } else if ([character isEqualToString:@"."]) {
         [self sendDot];
+    } else if ([character isEqualToString:@"+"]) {
+        [self sleepForSeconds:0.1];
     } else if ([character isEqualToString:@" "]) {
-        [self sleepForSeconds:0.1]; // a space turns the torch on for 0.1 seconds as is the delimiter between alphanumeric characters. Space is encoded as five spaces by Morse Category.
+        [self sleepForSeconds:0.4]; // A space is represented by " +" as + is the terminator defining the end of a non-morse character. This'll do 0.4, and the + will handle the rest of the 0.5 delay.
     }
 
 }

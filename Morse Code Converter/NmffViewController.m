@@ -13,8 +13,8 @@
 @interface NmffViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textToEncode;
 @property (weak, nonatomic) IBOutlet UIButton *sendMorseButton;
-@property (weak, nonatomic) IBOutlet UILabel *currentlySendingLabel;
 @property (weak, nonatomic) IBOutlet UIButton *cancelSendButton;
+@property (weak, nonatomic) IBOutlet UILabel *currentlySendingLabel;
 
 @end
 
@@ -24,15 +24,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     _textToEncode.delegate = self;
+    _sendMorseButton.enabled = FALSE;
+    _cancelSendButton.enabled = FALSE;
+    NSLog(@"Cancel Button Disabled");
 }
 
 #pragma mark - UIButton
 
 - (IBAction) sendMorseButton:(id)sender {
     if ([_textToEncode.text canEncodeToMorseCode]) {
+        _sendMorseButton.enabled = FALSE;
         NmffTorchController *torchController = [NmffTorchController shared];
-        [torchController sendString:_textToEncode.text withLabel: _currentlySendingLabel];
-            _textToEncode.text = @""; // set the text field to blank so the user knows we'll process it
+        [torchController sendString: _textToEncode.text
+                          withLabel: _currentlySendingLabel
+                    andCancelButton: _cancelSendButton];
+        _textToEncode.text = @""; // set the text field to blank so the user knows we'll process it
+
     } else {
         NSLog(@"Cannot Be Converted to Morse Code"); // This should not be reached as the button should be deactivated.
     }
