@@ -41,14 +41,19 @@
     if (self != nil) {
         // identify the torch and set the torch property
         NSArray *devices = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+
         for (AVCaptureDevice *device in devices) {
             if ([device hasTorch] && [device isTorchModeSupported:AVCaptureTorchModeOn]) {
                 _torch = device;
                 _torchQueue = [NSOperationQueue new];
                 [_torchQueue setMaxConcurrentOperationCount:1];
                 _mainQueue = [NSOperationQueue mainQueue];
-
             }
+        }
+
+        // If torch doesn't get set, there is no torch, return nil..
+        if (_torch == nil) {
+            return nil;
         }
     }
     return self;
@@ -78,7 +83,7 @@
             NSString *charToSend = [stringToSend substringWithRange:NSMakeRange(textStringLocation, 1)];
 
             [_mainQueue addOperationWithBlock:^ {
-                [_delegate updateCurrentlySendingLabelWithChar:charToSend];
+                [_delegate updateCurrentlySendingHUDWithChar:charToSend];
             }];
             // If the Dot/Dash/Space that we're sending is a plus it means we're at the end of a character, so we need to the textStringLocation by one so the next update will give us the right letter
             if ([dotDashToSend isEqualToString:@"+"]){
@@ -88,7 +93,7 @@
         } // For loop end
 
         [_mainQueue addOperationWithBlock:^ {
-            [_delegate updateCurrentlySendingLabelWithChar:@""];
+            [_delegate dismissHUD];
             [_delegate toggleCancelButton:FALSE];
         }];
 

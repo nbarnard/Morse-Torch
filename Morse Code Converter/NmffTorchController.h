@@ -10,7 +10,8 @@
 
 @protocol NmffTorchDelegate
 
--(void) updateCurrentlySendingLabelWithChar: (NSString *) label;
+-(void) updateCurrentlySendingHUDWithChar: (NSString *) label;
+-(void) dismissHUD;
 -(void) toggleCancelButton: (BOOL) status;
 -(void) toggleSendButton: (BOOL) status;
 

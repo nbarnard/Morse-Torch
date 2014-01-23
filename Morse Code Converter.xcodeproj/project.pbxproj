@@ -1,524 +1,1263 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		11AE8BA5188DCC2F0024151A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA4188DCC2F0024151A /* Foundation.framework */; };
-		11AE8BA7188DCC2F0024151A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA6188DCC2F0024151A /* CoreGraphics.framework */; };
-		11AE8BA9188DCC2F0024151A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA8188DCC2F0024151A /* UIKit.framework */; };
-		11AE8BAF188DCC2F0024151A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BAD188DCC2F0024151A /* InfoPlist.strings */; };
-		11AE8BB1188DCC2F0024151A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BB0188DCC2F0024151A /* main.m */; };
-		11AE8BB5188DCC2F0024151A /* NmffAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */; };
-		11AE8BB8188DCC2F0024151A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BB6188DCC2F0024151A /* Main.storyboard */; };
-		11AE8BBB188DCC2F0024151A /* NmffViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BBA188DCC2F0024151A /* NmffViewController.m */; };
-		11AE8BBD188DCC2F0024151A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BBC188DCC2F0024151A /* Images.xcassets */; };
-		11AE8BC4188DCC2F0024151A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BC3188DCC2F0024151A /* XCTest.framework */; };
-		11AE8BC5188DCC2F0024151A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA4188DCC2F0024151A /* Foundation.framework */; };
-		11AE8BC6188DCC2F0024151A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11AE8BA8188DCC2F0024151A /* UIKit.framework */; };
-		11AE8BCE188DCC2F0024151A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BCC188DCC2F0024151A /* InfoPlist.strings */; };
-		11AE8BD0188DCC2F0024151A /* Morse_Code_ConverterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */; };
-		11AE8BE0188DD0820024151A /* Morse Code.plist in Resources */ = {isa = PBXBuildFile; fileRef = 11AE8BDF188DD0820024151A /* Morse Code.plist */; };
-		11AE8BE3188DD10B0024151A /* NmffMorseCodeDict.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */; };
-		11AE8BE6188DD7090024151A /* NSString+Morse.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8BE5188DD7090024151A /* NSString+Morse.m */; };
-		11AE8C2A188F1F1A0024151A /* NmffTorchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11AE8C29188F1F1A0024151A /* NmffTorchController.m */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		11AE8BC7188DCC2F0024151A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 11AE8B99188DCC2F0024151A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 11AE8BA0188DCC2F0024151A;
-			remoteInfo = "Morse Code Converter";
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		11AE8BA1188DCC2F0024151A /* Morse Code Converter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morse Code Converter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		11AE8BA4188DCC2F0024151A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		11AE8BA6188DCC2F0024151A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		11AE8BA8188DCC2F0024151A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		11AE8BAC188DCC2F0024151A /* Morse Code Converter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Morse Code Converter-Info.plist"; sourceTree = "<group>"; };
-		11AE8BAE188DCC2F0024151A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		11AE8BB0188DCC2F0024151A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		11AE8BB2188DCC2F0024151A /* Morse Code Converter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Morse Code Converter-Prefix.pch"; sourceTree = "<group>"; };
-		11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NmffAppDelegate.h; sourceTree = "<group>"; };
-		11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NmffAppDelegate.m; sourceTree = "<group>"; };
-		11AE8BB7188DCC2F0024151A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		11AE8BB9188DCC2F0024151A /* NmffViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NmffViewController.h; sourceTree = "<group>"; };
-		11AE8BBA188DCC2F0024151A /* NmffViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NmffViewController.m; sourceTree = "<group>"; };
-		11AE8BBC188DCC2F0024151A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		11AE8BC2188DCC2F0024151A /* Morse Code ConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Morse Code ConverterTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		11AE8BC3188DCC2F0024151A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		11AE8BCB188DCC2F0024151A /* Morse Code ConverterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Morse Code ConverterTests-Info.plist"; sourceTree = "<group>"; };
-		11AE8BCD188DCC2F0024151A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Morse_Code_ConverterTests.m; sourceTree = "<group>"; };
-		11AE8BDF188DD0820024151A /* Morse Code.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Morse Code.plist"; path = "../Morse Code.plist"; sourceTree = "<group>"; };
-		11AE8BE1188DD10B0024151A /* NmffMorseCodeDict.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NmffMorseCodeDict.h; sourceTree = "<group>"; };
-		11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NmffMorseCodeDict.m; sourceTree = "<group>"; };
-		11AE8BE4188DD7090024151A /* NSString+Morse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Morse.h"; sourceTree = "<group>"; };
-		11AE8BE5188DD7090024151A /* NSString+Morse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Morse.m"; sourceTree = "<group>"; };
-		11AE8C28188F1F1A0024151A /* NmffTorchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NmffTorchController.h; sourceTree = "<group>"; };
-		11AE8C29188F1F1A0024151A /* NmffTorchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NmffTorchController.m; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		11AE8B9E188DCC2F0024151A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11AE8BA7188DCC2F0024151A /* CoreGraphics.framework in Frameworks */,
-				11AE8BA9188DCC2F0024151A /* UIKit.framework in Frameworks */,
-				11AE8BA5188DCC2F0024151A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11AE8BBF188DCC2F0024151A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11AE8BC4188DCC2F0024151A /* XCTest.framework in Frameworks */,
-				11AE8BC6188DCC2F0024151A /* UIKit.framework in Frameworks */,
-				11AE8BC5188DCC2F0024151A /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		11AE8B98188DCC2F0024151A = {
-			isa = PBXGroup;
-			children = (
-				11AE8BAA188DCC2F0024151A /* Morse Code Converter */,
-				11AE8BC9188DCC2F0024151A /* Morse Code ConverterTests */,
-				11AE8BA3188DCC2F0024151A /* Frameworks */,
-				11AE8BA2188DCC2F0024151A /* Products */,
-			);
-			sourceTree = "<group>";
-		};
-		11AE8BA2188DCC2F0024151A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BA1188DCC2F0024151A /* Morse Code Converter.app */,
-				11AE8BC2188DCC2F0024151A /* Morse Code ConverterTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		11AE8BA3188DCC2F0024151A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BA4188DCC2F0024151A /* Foundation.framework */,
-				11AE8BA6188DCC2F0024151A /* CoreGraphics.framework */,
-				11AE8BA8188DCC2F0024151A /* UIKit.framework */,
-				11AE8BC3188DCC2F0024151A /* XCTest.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		11AE8BAA188DCC2F0024151A /* Morse Code Converter */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8C2B188F302B0024151A /* Controllers */,
-				11AE8BE9188E500D0024151A /* View */,
-				11AE8BEA188E50250024151A /* String Handling */,
-				11AE8BAB188DCC2F0024151A /* Supporting Files */,
-			);
-			path = "Morse Code Converter";
-			sourceTree = "<group>";
-		};
-		11AE8BAB188DCC2F0024151A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BBC188DCC2F0024151A /* Images.xcassets */,
-				11AE8BDF188DD0820024151A /* Morse Code.plist */,
-				11AE8BB3188DCC2F0024151A /* NmffAppDelegate.h */,
-				11AE8BB4188DCC2F0024151A /* NmffAppDelegate.m */,
-				11AE8BAC188DCC2F0024151A /* Morse Code Converter-Info.plist */,
-				11AE8BAD188DCC2F0024151A /* InfoPlist.strings */,
-				11AE8BB0188DCC2F0024151A /* main.m */,
-				11AE8BB2188DCC2F0024151A /* Morse Code Converter-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		11AE8BC9188DCC2F0024151A /* Morse Code ConverterTests */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BCF188DCC2F0024151A /* Morse_Code_ConverterTests.m */,
-				11AE8BCA188DCC2F0024151A /* Supporting Files */,
-			);
-			path = "Morse Code ConverterTests";
-			sourceTree = "<group>";
-		};
-		11AE8BCA188DCC2F0024151A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BCB188DCC2F0024151A /* Morse Code ConverterTests-Info.plist */,
-				11AE8BCC188DCC2F0024151A /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		11AE8BE9188E500D0024151A /* View */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BB6188DCC2F0024151A /* Main.storyboard */,
-				11AE8BB9188DCC2F0024151A /* NmffViewController.h */,
-				11AE8BBA188DCC2F0024151A /* NmffViewController.m */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		11AE8BEA188E50250024151A /* String Handling */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8BE4188DD7090024151A /* NSString+Morse.h */,
-				11AE8BE5188DD7090024151A /* NSString+Morse.m */,
-				11AE8BE1188DD10B0024151A /* NmffMorseCodeDict.h */,
-				11AE8BE2188DD10B0024151A /* NmffMorseCodeDict.m */,
-			);
-			name = "String Handling";
-			sourceTree = "<group>";
-		};
-		11AE8C2B188F302B0024151A /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				11AE8C28188F1F1A0024151A /* NmffTorchController.h */,
-				11AE8C29188F1F1A0024151A /* NmffTorchController.m */,
-			);
-			name = Controllers;
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		11AE8BA0188DCC2F0024151A /* Morse Code Converter */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11AE8BD3188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code Converter" */;
-			buildPhases = (
-				11AE8B9D188DCC2F0024151A /* Sources */,
-				11AE8B9E188DCC2F0024151A /* Frameworks */,
-				11AE8B9F188DCC2F0024151A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Morse Code Converter";
-			productName = "Morse Code Converter";
-			productReference = 11AE8BA1188DCC2F0024151A /* Morse Code Converter.app */;
-			productType = "com.apple.product-type.application";
-		};
-		11AE8BC1188DCC2F0024151A /* Morse Code ConverterTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 11AE8BD6188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code ConverterTests" */;
-			buildPhases = (
-				11AE8BBE188DCC2F0024151A /* Sources */,
-				11AE8BBF188DCC2F0024151A /* Frameworks */,
-				11AE8BC0188DCC2F0024151A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				11AE8BC8188DCC2F0024151A /* PBXTargetDependency */,
-			);
-			name = "Morse Code ConverterTests";
-			productName = "Morse Code ConverterTests";
-			productReference = 11AE8BC2188DCC2F0024151A /* Morse Code ConverterTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		11AE8B99188DCC2F0024151A /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = Nmff;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "NMFF Development";
-				TargetAttributes = {
-					11AE8BC1188DCC2F0024151A = {
-						TestTargetID = 11AE8BA0188DCC2F0024151A;
-					};
-				};
-			};
-			buildConfigurationList = 11AE8B9C188DCC2F0024151A /* Build configuration list for PBXProject "Morse Code Converter" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 11AE8B98188DCC2F0024151A;
-			productRefGroup = 11AE8BA2188DCC2F0024151A /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				11AE8BA0188DCC2F0024151A /* Morse Code Converter */,
-				11AE8BC1188DCC2F0024151A /* Morse Code ConverterTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		11AE8B9F188DCC2F0024151A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11AE8BBD188DCC2F0024151A /* Images.xcassets in Resources */,
-				11AE8BAF188DCC2F0024151A /* InfoPlist.strings in Resources */,
-				11AE8BE0188DD0820024151A /* Morse Code.plist in Resources */,
-				11AE8BB8188DCC2F0024151A /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11AE8BC0188DCC2F0024151A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11AE8BCE188DCC2F0024151A /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		11AE8B9D188DCC2F0024151A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11AE8BB1188DCC2F0024151A /* main.m in Sources */,
-				11AE8BB5188DCC2F0024151A /* NmffAppDelegate.m in Sources */,
-				11AE8BE6188DD7090024151A /* NSString+Morse.m in Sources */,
-				11AE8C2A188F1F1A0024151A /* NmffTorchController.m in Sources */,
-				11AE8BE3188DD10B0024151A /* NmffMorseCodeDict.m in Sources */,
-				11AE8BBB188DCC2F0024151A /* NmffViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		11AE8BBE188DCC2F0024151A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				11AE8BD0188DCC2F0024151A /* Morse_Code_ConverterTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		11AE8BC8188DCC2F0024151A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 11AE8BA0188DCC2F0024151A /* Morse Code Converter */;
-			targetProxy = 11AE8BC7188DCC2F0024151A /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		11AE8BAD188DCC2F0024151A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11AE8BAE188DCC2F0024151A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		11AE8BB6188DCC2F0024151A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11AE8BB7188DCC2F0024151A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		11AE8BCC188DCC2F0024151A /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				11AE8BCD188DCC2F0024151A /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		11AE8BD1188DCC2F0024151A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		11AE8BD2188DCC2F0024151A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		11AE8BD4188DCC2F0024151A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
-				INFOPLIST_FILE = "Morse Code Converter/Morse Code Converter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		11AE8BD5188DCC2F0024151A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
-				INFOPLIST_FILE = "Morse Code Converter/Morse Code Converter-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		11AE8BD7188DCC2F0024151A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Morse Code Converter.app/Morse Code Converter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Morse Code ConverterTests/Morse Code ConverterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		11AE8BD8188DCC2F0024151A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Morse Code Converter.app/Morse Code Converter";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Morse Code Converter/Morse Code Converter-Prefix.pch";
-				INFOPLIST_FILE = "Morse Code ConverterTests/Morse Code ConverterTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		11AE8B9C188DCC2F0024151A /* Build configuration list for PBXProject "Morse Code Converter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				11AE8BD1188DCC2F0024151A /* Debug */,
-				11AE8BD2188DCC2F0024151A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		11AE8BD3188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code Converter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				11AE8BD4188DCC2F0024151A /* Debug */,
-				11AE8BD5188DCC2F0024151A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		11AE8BD6188DCC2F0024151A /* Build configuration list for PBXNativeTarget "Morse Code ConverterTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				11AE8BD7188DCC2F0024151A /* Debug */,
-				11AE8BD8188DCC2F0024151A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 11AE8B99188DCC2F0024151A /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>11AE8B98188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BAA188DCC2F0024151A</string>
+				<string>11AE8BC9188DCC2F0024151A</string>
+				<string>11AE8BA3188DCC2F0024151A</string>
+				<string>11AE8BA2188DCC2F0024151A</string>
+				<string>C3E7441639A64073B4220E52</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8B99188DCC2F0024151A</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>Nmff</string>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>NMFF Development</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>11AE8BC1188DCC2F0024151A</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>11AE8BA0188DCC2F0024151A</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>11AE8B9C188DCC2F0024151A</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>11AE8B98188DCC2F0024151A</string>
+			<key>productRefGroup</key>
+			<string>11AE8BA2188DCC2F0024151A</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>11AE8BA0188DCC2F0024151A</string>
+				<string>11AE8BC1188DCC2F0024151A</string>
+			</array>
+		</dict>
+		<key>11AE8B9C188DCC2F0024151A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>11AE8BD1188DCC2F0024151A</string>
+				<string>11AE8BD2188DCC2F0024151A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>11AE8B9D188DCC2F0024151A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>11AE8BB1188DCC2F0024151A</string>
+				<string>11AE8BB5188DCC2F0024151A</string>
+				<string>11AE8BE6188DD7090024151A</string>
+				<string>11AE8C2A188F1F1A0024151A</string>
+				<string>11AE8BE3188DD10B0024151A</string>
+				<string>11AE8BBB188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11AE8B9E188DCC2F0024151A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>11AE8BA7188DCC2F0024151A</string>
+				<string>11AE8BA9188DCC2F0024151A</string>
+				<string>11AE8BA5188DCC2F0024151A</string>
+				<string>E10A37C30FBF4CA1A7EB9F98</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11AE8B9F188DCC2F0024151A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>11AE8BBD188DCC2F0024151A</string>
+				<string>11AE8BAF188DCC2F0024151A</string>
+				<string>11AE8BE0188DD0820024151A</string>
+				<string>11AE8BB8188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11AE8BA0188DCC2F0024151A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>11AE8BD3188DCC2F0024151A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>41BA8FCDDDF34C2789254021</string>
+				<string>11AE8B9D188DCC2F0024151A</string>
+				<string>11AE8B9E188DCC2F0024151A</string>
+				<string>11AE8B9F188DCC2F0024151A</string>
+				<string>1AC3AD5C36BF453C9533FAB3</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Morse Code Converter</string>
+			<key>productName</key>
+			<string>Morse Code Converter</string>
+			<key>productReference</key>
+			<string>11AE8BA1188DCC2F0024151A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>11AE8BA1188DCC2F0024151A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Morse Code Converter.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>11AE8BA2188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BA1188DCC2F0024151A</string>
+				<string>11AE8BC2188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BA3188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BA4188DCC2F0024151A</string>
+				<string>11AE8BA6188DCC2F0024151A</string>
+				<string>11AE8BA8188DCC2F0024151A</string>
+				<string>11AE8BC3188DCC2F0024151A</string>
+				<string>B16D69BC6CEC4CD2923368BD</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BA4188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>11AE8BA5188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BA4188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BA6188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>11AE8BA7188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BA6188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BA8188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>11AE8BA9188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BA8188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BAA188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8C2B188F302B0024151A</string>
+				<string>11AE8BE9188E500D0024151A</string>
+				<string>11AE8BEA188E50250024151A</string>
+				<string>11AE8BAB188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Morse Code Converter</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BAB188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BBC188DCC2F0024151A</string>
+				<string>11AE8BDF188DD0820024151A</string>
+				<string>11AE8BB3188DCC2F0024151A</string>
+				<string>11AE8BB4188DCC2F0024151A</string>
+				<string>11AE8BAC188DCC2F0024151A</string>
+				<string>11AE8BAD188DCC2F0024151A</string>
+				<string>11AE8BB0188DCC2F0024151A</string>
+				<string>11AE8BB2188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BAC188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Morse Code Converter-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BAD188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BAE188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BAE188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BAF188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BAD188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BB0188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BB1188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BB0188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BB2188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Morse Code Converter-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BB3188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NmffAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BB4188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NmffAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BB5188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BB4188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BB6188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BB7188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BB7188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BB8188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BB6188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BB9188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NmffViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BBA188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NmffViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BBB188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BBA188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BBC188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BBD188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BBC188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BBE188DCC2F0024151A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>11AE8BD0188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11AE8BBF188DCC2F0024151A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>11AE8BC4188DCC2F0024151A</string>
+				<string>11AE8BC6188DCC2F0024151A</string>
+				<string>11AE8BC5188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11AE8BC0188DCC2F0024151A</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>11AE8BCE188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>11AE8BC1188DCC2F0024151A</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>11AE8BD6188DCC2F0024151A</string>
+			<key>buildPhases</key>
+			<array>
+				<string>11AE8BBE188DCC2F0024151A</string>
+				<string>11AE8BBF188DCC2F0024151A</string>
+				<string>11AE8BC0188DCC2F0024151A</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>11AE8BC8188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Morse Code ConverterTests</string>
+			<key>productName</key>
+			<string>Morse Code ConverterTests</string>
+			<key>productReference</key>
+			<string>11AE8BC2188DCC2F0024151A</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>11AE8BC2188DCC2F0024151A</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Morse Code ConverterTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>11AE8BC3188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>11AE8BC4188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BC3188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BC5188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BA4188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BC6188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BA8188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BC7188DCC2F0024151A</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>11AE8B99188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>11AE8BA0188DCC2F0024151A</string>
+			<key>remoteInfo</key>
+			<string>Morse Code Converter</string>
+		</dict>
+		<key>11AE8BC8188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>11AE8BA0188DCC2F0024151A</string>
+			<key>targetProxy</key>
+			<string>11AE8BC7188DCC2F0024151A</string>
+		</dict>
+		<key>11AE8BC9188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BCF188DCC2F0024151A</string>
+				<string>11AE8BCA188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>Morse Code ConverterTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BCA188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BCB188DCC2F0024151A</string>
+				<string>11AE8BCC188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BCB188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Morse Code ConverterTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BCC188DCC2F0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BCD188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BCD188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BCE188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BCC188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BCF188DCC2F0024151A</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Morse_Code_ConverterTests.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BD0188DCC2F0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BCF188DCC2F0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BD1188DCC2F0024151A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>11AE8BD2188DCC2F0024151A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>11AE8BD3188DCC2F0024151A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>11AE8BD4188DCC2F0024151A</string>
+				<string>11AE8BD5188DCC2F0024151A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>11AE8BD4188DCC2F0024151A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C3E7441639A64073B4220E52</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Morse Code Converter/Morse Code Converter-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Morse Code Converter/Morse Code Converter-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>11AE8BD5188DCC2F0024151A</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>C3E7441639A64073B4220E52</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Morse Code Converter/Morse Code Converter-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Morse Code Converter/Morse Code Converter-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>11AE8BD6188DCC2F0024151A</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>11AE8BD7188DCC2F0024151A</string>
+				<string>11AE8BD8188DCC2F0024151A</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>11AE8BD7188DCC2F0024151A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Morse Code Converter.app/Morse Code Converter</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Morse Code Converter/Morse Code Converter-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>Morse Code ConverterTests/Morse Code ConverterTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>11AE8BD8188DCC2F0024151A</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/Morse Code Converter.app/Morse Code Converter</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Morse Code Converter/Morse Code Converter-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>Morse Code ConverterTests/Morse Code ConverterTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>11AE8BDF188DD0820024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>name</key>
+			<string>Morse Code.plist</string>
+			<key>path</key>
+			<string>../Morse Code.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BE0188DD0820024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BDF188DD0820024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BE1188DD10B0024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NmffMorseCodeDict.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BE2188DD10B0024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NmffMorseCodeDict.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BE3188DD10B0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BE2188DD10B0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BE4188DD7090024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NSString+Morse.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BE5188DD7090024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NSString+Morse.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BE6188DD7090024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8BE5188DD7090024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8BE9188E500D0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BB6188DCC2F0024151A</string>
+				<string>11AE8BB9188DCC2F0024151A</string>
+				<string>11AE8BBA188DCC2F0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>View</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8BEA188E50250024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8BE4188DD7090024151A</string>
+				<string>11AE8BE5188DD7090024151A</string>
+				<string>11AE8BE1188DD10B0024151A</string>
+				<string>11AE8BE2188DD10B0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>String Handling</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8C28188F1F1A0024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>NmffTorchController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8C29188F1F1A0024151A</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>NmffTorchController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>11AE8C2A188F1F1A0024151A</key>
+		<dict>
+			<key>fileRef</key>
+			<string>11AE8C29188F1F1A0024151A</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>11AE8C2B188F302B0024151A</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>11AE8C28188F1F1A0024151A</string>
+				<string>11AE8C29188F1F1A0024151A</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Controllers</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1AC3AD5C36BF453C9533FAB3</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>41BA8FCDDDF34C2789254021</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>B16D69BC6CEC4CD2923368BD</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>C3E7441639A64073B4220E52</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>E10A37C30FBF4CA1A7EB9F98</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B16D69BC6CEC4CD2923368BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>11AE8B99188DCC2F0024151A</string>
+</dict>
+</plist>
